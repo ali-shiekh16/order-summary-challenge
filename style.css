@@ -1,0 +1,129 @@
+:root {
+  --breakpoint-mobile: 375px;
+  --breakpoint-desktop: 1440px;
+  --color-primary: hsl(245, 75%, 52%);
+  --color-secondary: hsl(225, 100%, 94%);
+  /* Neutral colors */
+  --color-pale: hsl(225, 100%, 98%);
+  --color-desaturated: hsl(224, 23%, 55%);
+  --color-dark: hsl(223, 47%, 23%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Red Hat Display', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  font-size: 1.6rem;
+  background-image: url(/images/pattern-background-mobile.svg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+p {
+  color: var(--color-desaturated);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-dark);
+}
+
+.card {
+  text-align: center;
+  background: var(--color-pale);
+  padding-bottom: 1rem;
+  box-shadow: 0 5px 25px #ccc;
+}
+
+.card__img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card {
+  border-radius: 20px;
+}
+
+.card__img {
+  border-radius: 20px 20px 0 0;
+}
+
+.card__body,
+.card__offer,
+.card__buttons {
+  margin: 0 2rem;
+}
+
+.card__body {
+  margin: 3rem 0 4rem;
+}
+
+.card__text {
+  padding: 0 1rem;
+}
+
+.card__offer {
+  display: flex;
+  background-color: var(--color-pale);
+  padding: 2rem 2rem;
+  border-radius: 10px;
+}
+
+.card__offer-text {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1.5rem;
+}
+
+.card__offer-text > * {
+  margin: 0;
+}
+
+.card__offer-title {
+  color: var(--color-dark);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card__button {
+  font-weight: bold;
+  color: var(--color-desaturated);
+}
+
+.card__button--block {
+  display: block;
+  margin: 3rem 0;
+}
+
+.card__button--active {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 2rem 0;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px var(--color-desaturated);
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-color: var(--color-secondary);
+    background-size: contain;
+  }
+
+  .card {
+    max-width: var(--breakpoint-mobile);
+  }
+}
